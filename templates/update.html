@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head%}
+<title>Using ginger for TODO app </title>
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    </style>
+{% endblock %}
+
+<!-- End of the head tag -->
+
+{% block body%}
+<div class="content">
+    <h1>Update Task Master</h1>
+    
+    <div class="form">
+    <form action="/update/{{task.id}}" method="POST">
+         <input type="text" name="content" id="content" value="{{task.content}}">
+         <input type="submit" value="update">
+    </form>
+</div>
+
+</div>
+{% endblock %}
